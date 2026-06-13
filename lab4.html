@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 4: CSS Integration Methods</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+        .internal-section h2 {
+            color: #d9534f;
+            font-family: 'Georgia', serif;
+            border-bottom: 2px solid #d9534f;
+            padding-bottom: 5px;
+        }
+        .internal-section p {
+            color: #5bc0de;
+            font-size: 16px;
+            line-height: 1.6;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="external-section">
+        <h3>External CSS Demo</h3>
+        <p>This entire view demonstrates external style sheet cascades applied directly via tag matching rules.</p>
+    </div>
+
+    <hr>
+
+    <div class="internal-section">
+        <h2>Internal CSS Heading Rule</h2>
+        <p>This paragraph utilizes internal styles specified within the document's header block metadata.</p>
+    </div>
+
+    <hr>
+
+    <div class="inline-section">
+        <h1 style="color: #5cb85c; text-align: center; font-family: 'Courier New', Courier, monospace;">Inline Designed Title</h1>
+        <p style="color: #f0ad4e; font-size: 18px; font-weight: bold; background-color: #222222; padding: 10px;">
+            This layout block strictly relies on individual style declaration attributes mapped to individual markup containers.
+        </p>
+    </div>
+
+    <hr>
+    <p><a href="lab2.html">Return to Central Index</a></p>
+
+</body>
+</html>
