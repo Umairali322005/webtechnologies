@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Tech</title>
+</head>
+<body>
+
+    <button onclick="task1()">Task 1</button>
+    <button onclick="task2()">Task 2</button>
+
+    <script>
+        function task1() {
+            let name = prompt("Enter your Name:");
+            let id = prompt("Enter your Registration ID:");
+            
+            alert(`Name: ${name}\nID: ${id}`);
+            
+            console.log("Name:", name, typeof name);
+            console.log("ID:", id, typeof id);
+        }
+
+        function task2() {
+            let num1 = Number(prompt("Enter first number:"));
+            let num2 = Number(prompt("Enter second number:"));
+
+            let sum = num1 + num2;
+            let diff = num1 - num2;
+            let prod = num1 * num2;
+            let quot = num1 / num2;
+            let comp = num1 > num2;
+
+            alert(`Sum: ${sum}\nDifference: ${diff}\nProduct: ${prod}\nQuotient: ${quot}\nNum1 > Num2: ${comp}`);
+
+            console.log("Data Types:", typeof num1, typeof num2);
+            console.log("Comparison:", comp);
+        }
+    </script>
+
+</body>
+</html>
