@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Lab</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 180px;
+            height: 160px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: 1px solid #ddd;
+            transition: 0.2s;
+        }
+
+        .circle {
+            width: 60px;
+            height: 60px;
+            background: #007bff;
+            border-radius: 50%;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        button {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box" id="colorBox">
+        <button onclick="changeColor()">Color</button>
+    </div>
+
+    <div class="box">
+        <p id="text">Hello</p>
+        <button onclick="changeText()">Text</button>
+    </div>
+
+    <div class="box">
+        <div class="circle" id="shape" onclick="growShape()"></div>
+    </div>
+
+    <div class="box" onmouseover="growBox(this)" onmouseout="shrinkBox(this)">
+        <p>Hover Me</p>
+    </div>
+
+    <script>
+        function changeColor() {
+            document.getElementById('colorBox').style.background = '#ffc107';
+        }
+
+        function changeText() {
+            document.getElementById('text').innerText = 'Clicked!';
+        }
+
+        function growShape() {
+            let shape = document.getElementById('shape');
+            shape.style.transform = 'scale(1.3)';
+            shape.style.background = '#dc3545';
+        }
+
+        function growBox(element) {
+            element.style.background = '#28a745';
+            element.style.color = 'white';
+        }
+
+        function shrinkBox(element) {
+            element.style.background = 'white';
+            element.style.color = 'black';
+        }
+    </script>
+
+</body>
+</html>
